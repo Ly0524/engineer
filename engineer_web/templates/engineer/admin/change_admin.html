@@ -1,0 +1,22 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+    <form action="" method="post" class="main_form">{% csrf_token %}
+        <div class="text_info clearfix">
+            <span>用户名：</span>
+        </div>
+         <div class="input_info">
+            <input type="text" name="username" maxlength="20" required id="id_username" value="{{ userinfoList.username }}">
+        </div>
+         <div class="text_info clearfix">
+            <span>密码：</span>
+        </div>
+         <div class="input_info">
+            <input type="text" name="password" maxlength="16" minlength="6" required id="id_password" value="{{ userinfoList.password }}">
+        </div>
+        <div class="button_info clearfix">
+            <input type="submit" value="修改" class="btn_save">
+            <button class="btn_save"><a href="/engineer/admin/{{ id }}/delete">删除</a></button>
+        </div>
+    </form>
+
+{% endblock %}

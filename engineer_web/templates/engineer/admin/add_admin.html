@@ -1,0 +1,29 @@
+{% extends 'model/model1.html' %}
+{% load static %}
+{% block model1 %}
+    <form action="" method="post" class="main_form">{% csrf_token %}
+        <div class="text_info clearfix">
+            <span>用户名：</span>
+        </div>
+        <div class="input_info">
+            <input type="text" name="username" maxlength="20" required id="id_username">
+            <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的汉字、字母、数字的组合</div>
+        </div>
+
+        <div class="text_info clearfix">
+            <span>密码：</span>
+        </div>
+        <div class="input_info">
+            <input type="text" name="password" maxlength="16" minlength="6" required id="id_password">
+            <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的汉字、字母、数字的组合</div>
+        </div>
+        <div class="button_info clearfix">
+            <input type="submit" value="提交" class="btn_save">
+            <input type="reset" value="重置" class="btn_save">
+        </div>
+
+
+    </form>
+{% endblock %}

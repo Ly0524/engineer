@@ -1,0 +1,36 @@
+{% extends 'model/regist_model.html' %}
+{% block model1 %}
+    <form action="" method="post" class="main_form">{% csrf_token %}
+    <p style="text-align: center">注册页面</p>
+        <div class="text_info clearfix">
+            <span>用户名：</span>
+        </div>
+         <div class="input_info">
+            <input type="text" name="username" maxlength="20" required id="id_username">
+             <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的汉字、字母、数字的组合</div>
+        </div>
+         <div class="text_info clearfix">
+            <span>密码：</span>
+        </div>
+         <div class="input_info">
+            <input type="text" name="password" maxlength="16" minlength="6" required id="id_password">
+             <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的汉字、字母、数字的组合</div>
+        </div>
+        <div class="text_info clearfix">
+            <span>请确认密码：</span>
+        </div>
+         <div class="input_info">
+            <input type="text" name="password" maxlength="16" minlength="6" required id="id_password">
+             <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的汉字、字母、数字的组合</div>
+        </div>
+
+        <div class="button_info clearfix">
+            <input type="submit" value="注册" class="btn_save">
+            <button class="btn_save"><a href="http://127.0.0.1:8000/login">返回登录</a></button>
+        </div>
+
+</form>
+{% endblock %}

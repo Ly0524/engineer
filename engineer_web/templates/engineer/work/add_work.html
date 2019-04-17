@@ -1,0 +1,48 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+    <form action="" method="post" class="main_form">{% csrf_token %}
+        <div class="text_info clearfix">
+            <span>工程名:</span>
+        </div>
+        <div class="input_info">
+            <input type="text" name="wengineer_name" maxlength="20" required id="id_wengineer_name">
+            <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的汉字、字母、数字的组合</div>
+        </div>
+
+        <div class="text_info clearfix">
+            <span>工程编号:</span>
+        </div>
+        <div class="input_info">
+            <input type="text" name="wengineer_num" maxlength="16" minlength="0" required id="id_wengineer_num">
+            <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的字母、数字的组合</div>
+        </div>
+
+        <div class="text_info clearfix">
+            <span>联系人:</span>
+        </div>
+        <div class="input_info">
+            <input type="text" name="wlinkman" maxlength="50" required id="id_wlinkman">
+            <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的汉字</div>
+        </div>
+
+        <div class="text_info clearfix">
+            <span>联系电话:</span>
+        </div>
+        <div class="input_info">
+            <input type="text" name="wphone" maxlength="20" required id="id_wphone">
+            <span class="required">*</span>
+            <div class="validate_msg_long">20长度以内的数字</div>
+        </div>
+        <div class="button_info clearfix">
+            <input type="submit" value="添加" class="btn_save">
+            <input type="reset" value="重置" class="btn_save">
+        </div>
+
+    </form>
+
+
+
+{% endblock %}

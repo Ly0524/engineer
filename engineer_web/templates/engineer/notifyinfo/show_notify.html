@@ -1,0 +1,65 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+    <div class="search_add">
+    </div>
+    <div class="data">
+        <table class="datalist">
+            <tbody>
+            <tr>
+                <th>id</th>
+                <th>违规类型</th>
+                <th>处理情况</th>
+                <th>安全员的ID</th>
+                <th>工地的ID</th>
+                <th>生成时间</th>
+                <th>最后变更日期</th>
+                <th></th>
+            </tr>
+            {% for line in notifyList %}
+                <tr>
+                    <td align="center">{{ line.id }}</td>
+                    <td align="center">{{ line.errortype }}</td>
+                    <td align="center">{{ line.dealvalue }}</td>
+                    <td align="center">{{ line.s.id }}</td>
+                    <td align="center">{{ line.w.id }}</td>
+                    <td align="center">{{ line.createTime }}</td>
+                    <td align="center">{{ line.changeTime }}</td>
+                    <td align="center">
+                        <button>
+                            <a href="/engineer/notifyinfo/{{ line.id }}/change">查看</a>
+                        </button>
+                    </td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="pages">
+            <ul>
+                {% if page.has_previous %}
+                    <a href="/engineer/show_notifyinfo/?page={{ page.previous_page_number }}">上一页</a>
+
+                {% else %}
+
+                    <a href="#">上一页</a>
+
+                {% endif %}
+                {% for page_num in paginator.page_range %}
+                    {% if page_num == page.number %}
+                        <a href="/engineer/show_notifyinfo/?page={{ page_num }}" class="current_page">{{ page_num }}</a>
+                    {% else %}
+                        <a href="/engineer/show_notifyinfo/?page={{ page_num }}">{{ page_num }}</a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page.has_next %}
+                    <a href="/engineer/show_notifyinfo/?page={{ page.next_page_number }}">下一页</a>
+                {% else %}
+                    <a href="#">下一页</a>
+                {% endif %}
+            </ul>
+
+        </div>
+
+{% endblock %}

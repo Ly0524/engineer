@@ -1,0 +1,62 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+     <div class="search_add">
+    <input type="button" value="添加" class="btn_add" onclick="location.href='/engineer/add_work/'">
+    </div>
+    <div class="data">
+      <table class="datalist">
+    <tbody>
+    <tr>
+        <th>id</th>
+        <th>工程名</th>
+        <th>工程编号</th>
+        <th>联系人</th>
+        <th>联系电话</th>
+        <th></th>
+    </tr>
+    {% for line in workList %}
+    <tr>
+        <td align="center">{{ line.id }}</td>
+        <td align="center">{{ line.wengineer_name }}</td>
+        <td align="center">{{ line.wengineer_num }}</td>
+        <td align="center">{{ line.wlinkman }}</td>
+        <td align="center">{{ line.wphone }}</td>
+        <td align="center">
+            <button>
+        <a href="/engineer/work/{{ line.id }}/change">查看</a>
+    </button>
+        </td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+    <div class="pages">
+            <ul>
+                {% if page.has_previous %}
+                    <a href="/engineer/show_work/?page={{ page.previous_page_number }}">上一页</a>
+
+                {% else %}
+
+                    <a href="#">上一页</a>
+
+                {% endif %}
+                {% for page_num in paginator.page_range %}
+                    {% if page_num == page.number %}
+                        <a href="/engineer/show_work/?page={{ page_num }}" class="current_page">{{ page_num }}</a>
+                    {% else %}
+                        <a href="/engineer/show_work/?page={{ page_num }}">{{ page_num }}</a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page.has_next %}
+                    <a href="/engineer/show_work/?page={{ page.next_page_number }}">下一页</a>
+                {% else %}
+                    <a href="#">下一页</a>
+                {% endif %}
+            </ul>
+
+        </div>
+
+{% endblock %}

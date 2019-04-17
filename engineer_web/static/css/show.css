@@ -1,0 +1,159 @@
+body{
+    background-color: #fcfbd7;
+}
+.div{
+    display: block;
+    margin: 0px auto;
+    padding: 0px;
+    border: 0;
+}
+.header{
+    text-align: right;
+    height: 61px;
+    width: 960px;
+    margin: 0px auto;
+}
+.header a{
+    margin-right: 50px;
+    line-height: 61px;
+    font-weight: bold;
+}
+.navi{
+    width: 100%;
+    height: 91px;
+    overflow: hidden;
+}
+
+.menu{
+    width: 960px;
+    margin: 0px auto
+}
+.main{
+    background: #e8f3f8;
+    border: 5px solid #8ac1db;
+    min-height: 500px;
+    width: 950px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    max-height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+.search_add{
+    width: 910px;
+    height: 30px;
+    text-align: right;
+    margin-top: 3px;
+}
+.btn_add{
+    height: 26px;
+    line-height: 26px;
+    width: 71px;
+    text-align: center;
+    overflow: hidden;
+    padding-left: 0px;
+}
+.datalist{
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+.data{
+    min-height: 330px;
+    margin: 0px auto;
+    padding: 0px;
+    border: 0;
+
+}
+.datalist th{
+    background: #fbedce;
+    border: #CCC solid 1px;
+    font-weight: bold;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+}
+.datalist td{
+    border: #CCC solid 1px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0px auto;
+    padding: 0px;
+
+}
+.pages{
+    width: 940px;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 5px;
+}
+.pages a{
+    color: #000;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.pages a:-webkit-any-link{
+    cursor: pointer;
+}
+.current_page{
+    background: #FFF;
+    border: #89bdd8 solid 1px;
+    color: #067db5;
+}
+
+.main_form{
+    width: 800px;
+    margin: 15px auto;
+}
+.text_info{
+    width: 200px;
+    text-align: right;
+    float: left;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.input_info{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 580px;
+    text-align: left;
+    margin-left: 10px;
+    float: left;
+    height: 40px;
+}
+.required{
+    color: Red;
+}
+.validate_msg_long{
+    width: 390px;
+    line-height: 28px;
+    float: right;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 5px;
+}
+.button_info{
+    text-align: left;
+    width: 380px;
+    clear: both;
+    margin-left: 210px;
+    margin-right: 210px;
+}
+
+.btn_save{
+    width: 100px;
+    height: 36px;
+    line-height: 26px;
+    font-size: 20px;
+    font-family: 黑体;
+    text-align: center;
+    margin-right: 5px;
+}
+
+

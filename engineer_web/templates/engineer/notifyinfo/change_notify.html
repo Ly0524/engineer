@@ -1,0 +1,53 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+    <form action="" method="post" >{% csrf_token %}
+        <div class="text_info clearfix">
+                <span>违规类型：</span>
+         </div>
+        <div class="input_info">
+                <input type="text" disabled="disabled" name="errortype" required id="id_errotype" value="{{ notifyList.errortype }}">
+        </div>
+        <div class="text_info clearfix">
+                <span>处理情况：</span>
+         </div>
+        <div class="input_info">
+                <select name="dealvalue">
+                <option value="N" selected="selected">{{ notifyList.dealvalue }}</option>
+                    <option value="N">N</option>
+                    <option value="T">T</option>
+                    <option value="Y">Y</option>
+            </select>
+        </div>
+        <div class="text_info clearfix">
+                <span>安全员ID：</span>
+         </div>
+        <div class="input_info">
+                <input type="text" disabled="disabled" name="safe_id" required id="id_s" value="{{ safeList.id }}">
+        </div>
+        <div class="text_info clearfix">
+                <span>安全员姓名：</span>
+         </div>
+        <div class="input_info">
+                <input type="text" disabled="disabled" name="s_name" required id="id_sname" value="{{ safeList.sname }}">
+        </div>
+        <div class="text_info clearfix">
+                <span>工地：</span>
+         </div>
+        <div class="input_info">
+                <input type="number" disabled="disabled" name="work_id" required id="id_w" value="{{ workList.wengineer_num }}">
+        </div>
+        <div class="button_info clearfix">
+            <input type="submit" value="修改" class="btn_save">
+        </div>
+{#        <tr>#}
+{#            <th><label for="id_createTime">生成时间:</label></th>#}
+{#            <td><input type="text" name="createTime" required id="id_createTime"></td>#}
+{#        </tr><br>#}
+{#        <tr>#}
+{#            <th><label for="id_changeTime">最后变更时间:</label></th>#}
+{#            <td><input type="text" name="changeTime" required id="id_changeTime"></td>#}
+{#        </tr>#}
+    </form>
+
+
+{% endblock %}

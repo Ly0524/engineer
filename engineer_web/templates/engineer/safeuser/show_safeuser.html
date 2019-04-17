@@ -1,0 +1,64 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+    <form action="" method="post">{% csrf_token %}
+    <div class="search_add">
+        <input type="button" value="添加" class="btn_add" onclick="location.href='/engineer/add_safeuser/'">
+    </div>
+    <div class="data">
+        <table class="datalist">
+
+            <tbody>
+            <tr>
+                <th>id</th>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>所属单位</th>
+                <th>负责人</th>
+                <th></th>
+            </tr>
+            {% for line in safeuserList %}
+                <tr>
+                    <td align="center">{{ line.id }}</td>
+                    <td align="center">{{ line.sname }}</td>
+                    <td align="center">{{ line.spassword }}</td>
+                    <td align="center">{{ line.sinstitute }}</td>
+                    <td align="center">{{ line.p.pname }}</td>
+                    <td align="center">
+                        <button>
+                            <a href="/engineer/safeuser/{{ line.id }}/change">查看</a>
+                        </button>
+                    </td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="pages">
+        <ul>
+            {% if page.has_previous %}
+                <a href="/engineer/show_safeuser/?page={{ page.previous_page_number }}">上一页</a>
+
+            {% else %}
+
+                <a href="#">上一页</a>
+
+            {% endif %}
+            {% for page_num in paginator.page_range %}
+                {% if page_num == page.number %}
+                    <a href="/engineer/show_safeuser/?page={{ page_num }}" class="current_page">{{ page_num }}</a>
+                {% else %}
+                    <a href="/engineer/show_safeuser/?page={{ page_num }}">{{ page_num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if page.has_next %}
+                <a href="/engineer/show_safeuser/?page={{ page.next_page_number }}">下一页</a>
+            {% else %}
+                <a href="#">下一页</a>
+            {% endif %}
+        </ul>
+
+    </div>
+    </form>
+{% endblock %}

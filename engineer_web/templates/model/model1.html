@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>管理界面</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/show.css">
+</head>
+<body>
+<div class="header">
+    <a href="http://127.0.0.1:8000/logout/">退出登录</a></div>
+<div class="navi">
+    <ul class="menu">
+        <li>
+            <a href="">主页</a>
+        </li>
+        <li>
+            <a href="   ">管理</a>
+        </li>
+    </ul>
+</div>
+<div class="main">
+    {% block model1 %}
+
+    {% endblock %}
+</div>
+</body>
+</html>
+

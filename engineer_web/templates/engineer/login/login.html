@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+<body class="all">
+    <div class="main">
+    <h1>工程登录系统</h1>
+    <form action="/login/" method="post">{% csrf_token %}
+        <input type="text" name="username" value="用户名" onfocus="this.value='';" onblur="if (this.value==''){this.value='用户名';}" required>
+        <input type="password" name="password" value="密码" onfocus="this.value='';" onblur="if (this.value==''){this.value='password';}" required>
+    <input type="radio" value="UserInfo" name="module"><span style="color: #feeb2a">管理员</span>
+    <input type="radio" value="Pic" name="module"><span style="color: #feeb2a">负责人</span>
+    <input type="radio" value="SafeUser" name="module"><span style="color: #feeb2a">安全员</span><br>
+        <span>没有密码？</span><span><a href="http://127.0.0.1:8000/regist/">注册一下</a></span>
+    <p>
+        <input type="submit" value="登录">
+    </p>
+    </form>
+</div>
+<div class="footer">
+    <p>
+
+    </p>
+</div>
+
+</body>
+</html>
+

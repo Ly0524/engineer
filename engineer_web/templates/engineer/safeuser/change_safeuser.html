@@ -1,0 +1,39 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+    <form action="" method="post">{% csrf_token %}
+         <div class="text_info clearfix">
+                <span>用户名：</span>
+         </div>
+        <div class="input_info">
+                <input type="text" name="sname" maxlength="20" required id="id_sname" value="{{ safeuserList.sname }}">
+        </div>
+        <div class="text_info clearfix">
+                <span>密码：</span>
+        </div>
+        <div class="input_info">
+                <input type="text" name="spassword" maxlength="16" minlength="6" required id="id_spassword" value="{{ safeuserList.spassword }}">
+        </div>
+        <div class="text_info clearfix">
+            <span>所属单位：</span>
+        </div>
+        <div class="input_info">
+            <input type="text" name="sinstitute" maxlength="50" required id="id_sinstitute" value="{{ safeuserList.sinstitute }}">
+        </div>
+        <div class="text_info clearfix">
+            <span>所属负责人：</span>
+        </div>
+        <div class="input_info">
+            <select name="p">
+                <option value="{{ safeuserList.p.id }}" selected="selected">{{ safeuserList.p.pname }}</option>
+                {% for i in picList %}
+                    <option value="{{ i.id }}">{{ i.pname }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="button_info clearfix">
+            <input type="submit" value="修改" class="btn_save">
+            <button class="btn_save"><a href="/engineer/safeuser/{{ id }}/delete">删除</a></button>
+        </div>
+    </form>
+
+{% endblock %}

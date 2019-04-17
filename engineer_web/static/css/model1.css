@@ -1,0 +1,82 @@
+/*body {*/
+    /*background-color: #fcfbd7;*/
+    /*font-size: 20px;*/
+/*}*/
+
+/*a {*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*.wrapped {*/
+    /*width: 950px;*/
+    /*margin: auto;*/
+/*}*/
+
+/*.top {*/
+    /*height: 295px;*/
+/*}*/
+
+
+/*.top_main {*/
+    /*width: 950px;*/
+    /*height: 295px;*/
+    /*background-color: aqua;*/
+/*}*/
+
+/*.top_main_head {*/
+    /*height: 250px;*/
+    /*margin-top: 5px;*/
+    /*margin-bottom: 5px;*/
+    /*margin-left: 10px;*/
+    /*padding-top: 5px;*/
+    /*padding-bottom: 5px;*/
+    /*padding-left: 5px;*/
+/*}*/
+
+/*.top_main_down {*/
+    /*height: 35px;*/
+    /*padding-top: 2px;*/
+    /*padding-bottom: 3px;*/
+    /*background-color: blue;*/
+/*}*/
+
+/*.module {*/
+    /*margin-top: 20px;*/
+    /*margin-bottom: 10px;*/
+/*}*/
+
+/*.module_left {*/
+    /*background-color: aliceblue;*/
+    /*float: left;*/
+    /*width: 190px;*/
+    /*padding: 5px 10px 20px 10px;*/
+/*}*/
+
+/*.module_right {*/
+    /*background-color: #f5f6f7;*/
+    /*margin-left: 10px;*/
+    /*display: inline;*/
+    /*float: left;*/
+    /*overflow: hidden;*/
+    /*text-align: left;*/
+    /*width: 730px;*/
+    /*height: 100%;*/
+/*}*/
+
+/*.module_right_head {*/
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*height: 26px;*/
+/*}*/
+
+/*.module_right_blog {*/
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*padding-bottom: 40px;*/
+/*}*/
+
+/*.dropdown {*/
+    /*text-align: center;*/
+    /*padding: 5px 10px 20px 10px;*/
+    /*clear: both;*/
+/*}*/

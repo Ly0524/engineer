@@ -1,0 +1,64 @@
+.all{
+    background:url("/static/picture/demo-1-bg.jpg");
+}
+.main{
+    width: 35%;
+    margin: 8em auto 0;
+    padding: 0em 4em 5em;
+}
+.main h1{
+    color: #7e8fad;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0 0 1.5em;
+}
+.main input[type='text']{
+    outline: none;
+    border: 1px solid #FFF;
+    background: #fef053;
+    -webkit-border-radius: 5px;
+    padding: 15px 10px;
+    width: 96%;
+    font-size: 1.3em;
+    color: #7e8fad;
+    text-align: center;
+    font-family: 'Syncopate', sans-serif;
+}
+.main input[type='password']{
+    margin: 1.5em 0;
+    outline: none;
+    border: 1px solid #FFF;
+    background: #fef053;
+    -webkit-border-radius: 5px;
+    padding: 15px 10px;
+    width: 96%;
+    font-size: 1.3em;
+    color: #7e8fad;
+    text-align: center;
+    font-family: 'Syncopate', sans-serif;
+}
+.main input[type='radio']{
+    margin-left: 80px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.main input[type="submit"] {
+    outline: none;
+    border: 1px solid #f8fec1;
+    background: #feeb2a;
+    -webkit-border-radius: 5px;
+    padding: 15px 10px;
+    width: 100%;
+    color: #7e8fad;
+    font-size: 1.5em;
+    font-family: 'Syncopate', sans-serif;
+    cursor: pointer;
+}
+form{
+    display: block;
+}
+.footer{
+    text-align: center;
+    padding: 2em 0 0;
+}

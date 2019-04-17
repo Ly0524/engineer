@@ -1,0 +1,35 @@
+{% extends 'model/model1.html' %}
+{% block model1 %}
+    <form action="" method="post">
+         <div class="text_info clearfix">
+                <span>工程名：</span>
+         </div>
+        <div class="input_info">
+                <input type="text" name="wengineer_name" maxlength="20" required id="id_wengineer_name" value="{{ workList.wengineer_name }}">
+        </div>
+        <div class="text_info clearfix">
+                <span>工程编号：</span>
+        </div>
+        <div class="input_info">
+                <input type="text" name="wengineer_num" maxlength="16" minlength="0" required id="id_wengineer_num" value="{{ workList.wengineer_num }}">
+        </div>
+        <div class="text_info clearfix">
+                <span>联系人：</span>
+         </div>
+        <div class="input_info">
+                <input type="text" name="wlinkman" maxlength="50" required id="id_wlinkman" value="{{ workList.wlinkman }}">
+        </div>
+        <div class="text_info clearfix">
+                <span>联系电话：</span>
+         </div>
+        <div class="input_info">
+                <input type="text" name="wphone" maxlength="20" required id="id_wphone" value="{{ workList.wphone }}">
+        </div>
+        <div class="button_info clearfix">
+            <input type="submit" value="修改" class="btn_save">
+            <button class="btn_save"><a href="/engineer/work/{{ id }}/delete">删除</a></button>
+        </div>
+
+    </form>
+
+{% endblock %}
